@@ -1,2 +1,71 @@
-@import "hide.css";
-@import "main.css";
+.hidden {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: whitesmoke;
+    text-align: center;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(40%);
+    object-fit: cover;
+}
+
+input{
+    background: none;
+    appearance: none;
+    border: 0;
+    font-size: 15px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+input::placeholder{
+    color: white;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#clockDate{
+    font-size: 20px;
+}
+
+#clock {
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#weather{
+    padding: 10px;
+}
+
+#greeting {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}   
+
+#quote{
+    padding: 20px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#todo-list{
+    list-style: none;
+}
+
+#redButton{
+    cursor: pointer;
+}

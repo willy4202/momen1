@@ -9,11 +9,10 @@ function onGeoOk(position) {
         .then((data) => {
             const weather = document.querySelector("#weather span:first-child")
             const city = document.querySelector("#weather span:last-child")
+            weather.innerText = `${data.weather[0].main} / ${data.main.temp.toFixed(1)}°C`
             city.innerText = data.name;
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`
         });
 }
-
 
 function onGeoError() {
     alert("위치를 찾을 수 없어 날씨 정보를 띄울 수 없습니다.")

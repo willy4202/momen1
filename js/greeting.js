@@ -11,12 +11,13 @@ function paintingGretting(username) {
   gretting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-function onLogOutSubmit(){
+function onLogOutSubmit(event) {
+  event.preventDefault();
   localStorage.removeItem(USERNAME_KEY);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   logOutForm.classList.add(HIDDEN_CLASSNAME);
   gretting.classList.add(HIDDEN_CLASSNAME);
-  loginInput.value ="";  
+  loginInput.value = "";
 }
 
 function onLoginSubmit(event) {
@@ -33,9 +34,11 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
-  logOutForm.classList.remove(HIDDEN_CLASSNAME);
+  logOutForm.classList.add(HIDDEN_CLASSNAME);
 } else {
   paintingGretting(savedUsername);
+  logOutForm.classList.remove(HIDDEN_CLASSNAME);
 };
 
 logOutForm.addEventListener("click", onLogOutSubmit);
+

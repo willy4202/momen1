@@ -42,6 +42,14 @@ const quotes = [
     {
         quote: "누구나 약속하기는 쉽다. 그러나 그 약속을 이행하기란 쉬운 일이 아니다.",
         author: "- 에머슨",
+    },
+    {
+        quote: "패배보다는 승리 때문에 몰락하는 사람이 더 많다.",
+        author: "- 엘리너 루스벨트",
+    },
+    {
+        quote: "바람이 불지 않을 때 바람개비를 돌리는 방법은, 내가 앞으로 달려 나가는 것이다.",
+        author: "- 데일 카네기",
     }
 ];
 const quote = document.querySelector("#quote span:first-child");

@@ -50,6 +50,10 @@ const quotes = [
     {
         quote: "바람이 불지 않을 때 바람개비를 돌리는 방법은, 내가 앞으로 달려 나가는 것이다.",
         author: "- 데일 카네기",
+    },
+    {
+        quote: "세상에서 가장 큰 행복은 한 해가 끝날 때 그해의 처음보다 더 나아진 자신을 느낄 때이다.",
+        author: "- 톨스토이",
     }
 ];
 const quote = document.querySelector("#quote span:first-child");
